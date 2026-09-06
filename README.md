@@ -29,13 +29,36 @@ Atuo com foco em **qualidade de software**, testes automatizados, testes explora
 
 <br/>
 
+## 🌟 Projetos em destaque
+
+| Projeto | Sobre |
+|---|---|
+| [rca-agent-lab](https://github.com/Mr-Lucasz/rca-agent-lab) ⭐ | Agente e skills que transformam bugs em uma análise de causa raiz (RCA) rastreável, com dashboard HTML autocontido |
+| [holyhub-services](https://github.com/Mr-Lucasz/holyhub-services) / [holyhub-mfe](https://github.com/Mr-Lucasz/holyhub-mfe) | Arquitetura de microsserviços e microfrontends do meu TCC |
+| [omnichannel-lead-router](https://github.com/Mr-Lucasz/omnichannel-lead-router) | Plataforma que distribui leads de WhatsApp/Instagram entre corretores (round-robin) |
+| [mcp-zephyr-test-manager](https://github.com/Mr-Lucasz/mcp-zephyr-test-manager) | Servidor MCP para gestão de testes via Zephyr Scale, direto do Cursor |
+| [java-password-manager](https://github.com/Mr-Lucasz/java-password-manager) | Gerenciador de senhas em Java com AES-256-CBC e SHA-256 |
+
+<br/>
+
 ## ⚙️ Skills & Tools
 
 **Linguagens**
 
 <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white" />
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
+
+**Frameworks & Plataformas**
+
+<img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
+<img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" />
+<img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white" />
+<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" />
 
 **Testes & QA**
 
