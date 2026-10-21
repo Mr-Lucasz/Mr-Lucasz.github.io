@@ -12,10 +12,12 @@ export function CertificationCard({ cert, delay }) {
     >
       <div className={styles.certBadge}>🏅</div>
       <h4 className={styles.certName}>{cert.name}</h4>
-      <div className={styles.certMeta}>
-        <span className={styles.certIssuer}>{cert.issuer}</span>
-        <span className={styles.certYear}>{cert.year}</span>
-      </div>
+      {(cert.issuer || cert.year) && (
+        <div className={styles.certMeta}>
+          {cert.issuer && <span className={styles.certIssuer}>{cert.issuer}</span>}
+          {cert.year && <span className={styles.certYear}>{cert.year}</span>}
+        </div>
+      )}
     </motion.div>
   );
 }

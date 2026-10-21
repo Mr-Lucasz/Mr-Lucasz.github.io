@@ -1,18 +1,17 @@
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
 import "chart.js/auto";
 import styles from "./Skills.module.css";
-import { skillsData } from "../../data/skillsData"; // Assuming you have a separate file for skills data
+import { skillsData } from "../../data/skillsData";
 import { SkillsTestAutomationSection } from "../../components/Skills/SkillsTestAutomationSection";
 import { SkillsTechnicalSection } from "../../components/Skills/SkillsTechnicalSection";
 import { SkillsQAProcessSection } from "../../components/Skills/SkillsQAProcessSection";
 import { SkillsLeadershipSection } from "../../components/Skills/SkillsLeadershipSection";
 import { SkillsCertificationsSection } from "../../components/Skills/SkillsCertificationsSection";
 import { useTranslation } from "react-i18next";
+import { usePixelReveal } from "../../hooks/usePixelReveal";
 
 export function Skills() {
   const { t } = useTranslation();
-  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [ref, inView] = usePixelReveal();
 
   const radarData = {
     labels: skillsData.programming.map((skill) => skill.name),
@@ -20,10 +19,10 @@ export function Skills() {
       {
         label: "Technical Stack",
         data: skillsData.programming.map((skill) => skill.level),
-        backgroundColor: "rgba(193, 11, 111, 0.2)",
-        borderColor: "#ff70d9", // Linha mais clara
+        backgroundColor: "rgba(255, 111, 111, 0.18)",
+        borderColor: "#35d0b0",
         borderWidth: 2,
-        pointBackgroundColor: "#ff70d9", // Pontos mais claros também
+        pointBackgroundColor: "#ffcf56",
       },
     ],
   };
@@ -32,54 +31,36 @@ export function Skills() {
     scales: {
       r: {
         angleLines: {
-          display: false,
+          color: "rgba(157, 155, 196, 0.3)",
         },
         suggestedMin: 0,
         suggestedMax: 100,
         pointLabels: {
-          color: "#fff", // Nome dos KPIs mais visível
+          color: "#f4efe0",
           font: {
+            family: "VT323",
             size: 16,
-            weight: "bold",
           },
         },
         grid: {
-          color: "rgba(255,255,255,0.2)", // Linhas da grade mais claras
+          color: "rgba(157, 155, 196, 0.25)",
         },
         ticks: {
-          color: "#fff", // Números do eixo mais visíveis
+          color: "#9d9bc4",
           backdropColor: "transparent",
         },
       },
     },
+    plugins: {
+      legend: { display: false },
+    },
   };
 
   return (
-    <motion.section
-      id="skills"
-      className={styles.skillsSection}
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8 }}
-    >
+    <section id="skills" className={styles.skillsSection} ref={ref}>
       <div className={styles.header}>
-        <motion.h2
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.3 }}
-          className={styles.title}
-        >
-          {t("skills_title")}
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.5 }}
-          className={styles.subtitle}
-        >
-          {t("skills_subtitle")}
-        </motion.p>
+        <h2 className={styles.title}>{t("skills_title")}</h2>
+        <p className={styles.subtitle}>{t("skills_subtitle")}</p>
       </div>
       <div className={styles.dashboard}>
         <SkillsTestAutomationSection
@@ -109,6 +90,6 @@ export function Skills() {
           t={t}
         />
       </div>
-    </motion.section>
+    </section>
   );
 }

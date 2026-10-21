@@ -11,7 +11,6 @@
   align-items: center;
   padding: 0 1.5rem;
   box-sizing: border-box;
-  background-color: transparent !important;
   transition: min-height 0.2s, padding 0.2s;
 }
 
@@ -21,29 +20,22 @@
   height: 100%;
 }
 
-@keyframes rotateLogo {
-  from {
-    transform: rotate(2deg);
-  }
-  to {
-    transform: rotate(6deg);
-  }
-}
-
 .logotipo {
-  width: 72px;
+  width: 56px;
   max-width: 18vw;
-  min-width: 40px;
+  min-width: 36px;
   height: auto;
-  animation: rotateLogo 10s linear infinite;
-  transition: width 0.2s;
+  image-rendering: pixelated;
+  transition: width 0.2s, filter 0.2s ease;
+  filter: drop-shadow(3px 3px 0 var(--pixel-border));
 }
 
 .logotipo:hover {
-  animation: none;
+  filter: drop-shadow(3px 3px 0 var(--pixel-mustard));
 }
-.blur {
-  filter: blur(5px);
+
+.spacer {
+  flex: 1;
 }
 
 @media (max-width: 1024px) {
@@ -52,7 +44,7 @@
     padding: 0 0.7rem;
   }
   .logotipo {
-    width: 56px;
+    width: 48px;
     max-width: 28vw;
   }
 }
@@ -62,7 +54,7 @@
     padding: 0 0.3rem;
   }
   .logotipo {
-    width: 40px;
+    width: 38px;
     max-width: 36vw;
   }
 }
@@ -76,6 +68,7 @@
     max-width: 50vw;
   }
 }
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -86,24 +79,19 @@
   position: absolute;
   top: 0.5rem;
   right: 1rem;
-  background: none;
-  border: none;
+  background: var(--pixel-panel);
+  border: 3px solid var(--pixel-border);
+  border-radius: 4px;
   outline: none;
   cursor: pointer;
-  z-index: 1100;
-  transition: background 0.2s;
-}
-.hamburger:hover, .hamburger:focus {
-  background: rgba(255,255,255,0.08);
-  border-radius: 50%;
+  z-index: 1202;
 }
 .hamburgerBar {
-  width: 28px;
-  height: 4px;
-  background: #fff;
-  margin: 3px 0;
-  border-radius: 2px;
-  transition: all 0.3s;
+  width: 20px;
+  height: 3px;
+  background: var(--pixel-ink);
+  margin: 2px 0;
+  transition: all 0.2s;
   display: block;
 }
 .closeIcon {
@@ -111,15 +99,13 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%) scale(0);
-  color: #fff;
-  font-size: 2rem;
+  color: var(--pixel-mustard);
+  font-size: 1.3rem;
   pointer-events: none;
-  transition: transform 0.3s;
-  z-index: 1201; /* maior que o menu */
+  transition: transform 0.2s;
 }
 .hamburgerOpen .hamburgerBar {
   opacity: 0;
-  transform: scaleX(0.5);
 }
 .hamburgerOpen .closeIcon {
   transform: translate(-50%,-50%) scale(1);
@@ -129,12 +115,5 @@
 @media (max-width: 900px) {
   .hamburger {
     display: flex !important;
-    z-index: 1202;
-  }
-}
-
-@media (max-width: 900px) {
-  .mobileMenu {
-    z-index: 1200;
   }
 }

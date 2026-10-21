@@ -1,42 +1,31 @@
 /* CertificationCard.module.css */
 .certCard {
-  background: rgba(255, 255, 255, 0.271);
-  border-radius: 0.8rem;
-  padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  background: var(--pixel-bg-deep);
+  border: 3px solid var(--pixel-border);
+  border-radius: 4px;
+  padding: 1.1rem 1.2rem;
   width: 100%;
   min-width: 220px;
-  max-width: 350px;
+  max-width: 320px;
   flex: 1 1 250px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
-.certCard::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(to bottom, #c10b6f63, #0bc1a8);
-}
 .certBadge {
-  font-size: 1.8rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
 }
 .certName {
-  font-size: 1rem;
-  color: #fff;
+  font-family: var(--font-pixel);
+  font-size: 1.15rem;
+  color: var(--pixel-mustard);
   margin-bottom: 0.5rem;
-  font-weight: 600;
 }
 .certMeta {
   display: flex;
   justify-content: space-between;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--pixel-dim);
 }

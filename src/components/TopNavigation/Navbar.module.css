@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-
 .navbar {
   display: flex;
   justify-content: center;
@@ -12,105 +10,73 @@
 
 .navbarList {
   display: flex;
-  gap: 1rem;
+  gap: 0.4rem;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  max-height: 50px;
   width: 100%;
-  background: none;
-  position: static;
-  box-shadow: none;
 }
 
-.navbarList li{
-    height: 100%;
-    list-style: none;
-    padding: 0.75rem 1rem;
-    font-family: "Righteous", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem;
+.navbarList li {
+  list-style: none;
 }
 
-.navbarList a{
-    text-decoration: none;
-    color: #f5f5f5;
+.navbarList a {
+  font-family: var(--font-pixel);
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--pixel-dim);
+  padding: 0.5rem 0.7rem;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: color 0.15s, border-color 0.15s;
 }
 
-.navbarList a:hover{
-    border-bottom: 2px solid #ffffff;
-    transition: border-bottom 0.2s;
-
+.navbarList a:hover,
+.navbarList a:focus-visible,
+.navbarList .activeLink {
+  color: var(--pixel-ink);
+  border-color: var(--pixel-border);
+  background: var(--pixel-panel);
 }
 
 @media (max-width: 1024px) {
-  .navbarList {
-    font-size: 1.1rem;
-    gap: 0.5rem;
-    padding: 0.5rem 0.2rem;
+  .navbarList a {
+    font-size: 1.15rem;
+    padding: 0.4rem 0.5rem;
   }
 }
 @media (max-width: 768px) {
-  .navbarList {
-    font-size: 1rem;
-    gap: 0.2rem;
-    padding: 0.2rem 0.1rem;
-  }
-}
-@media (max-width: 576px) {
-  .navbarList {
-    font-size: 0.9rem;
-    gap: 0.1rem;
-    padding: 0.1rem 0.05rem;
+  .navbarList a {
+    font-size: 1.05rem;
   }
 }
 
 .desktopLang {
   display: flex;
   align-items: center;
-  margin-left: 1.5rem;
+  margin-left: 1.2rem;
 }
 .mobileLang {
   display: none;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1100;
-}
-.hamburgerBar {
-  width: 28px;
-  height: 4px;
-  background: #fff;
-  margin: 3px 0;
-  border-radius: 2px;
-  transition: all 0.3s;
 }
 
 .mobileMenu {
   position: fixed;
   top: 0;
   right: 0;
-  width: 65vw;
+  width: 68vw;
   max-width: 300px;
   height: 100vh;
-  background: rgba(27,27,27,0.98);
-  box-shadow: -2px 0 12px rgba(0,0,0,0.2);
+  background: var(--pixel-bg-deep);
+  border-left: 3px solid var(--pixel-border);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 4.5rem 1.5rem 1rem 1.5rem;
   z-index: 1200;
-  animation: slideInMenu 0.2s;
+  animation: slideInMenu 0.15s steps(3);
 }
 @keyframes slideInMenu {
   from { right: -100vw; }
@@ -119,19 +85,26 @@
 .mobileMenuList {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.1rem;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 .mobileMenuList li {
   list-style: none;
-  font-size: 1.3rem;
-  padding: 0.5rem 0;
 }
 .mobileMenuList a {
-  color: #fff;
+  font-family: var(--font-pixel);
+  font-size: 1.3rem;
+  color: var(--pixel-ink);
   text-decoration: none;
+  display: inline-block;
+}
+
+.mobileMenuList a:hover,
+.mobileMenuList a:focus-visible,
+.mobileMenuList .activeLink {
+  color: var(--pixel-teal);
 }
 .mobileLang {
   display: flex;

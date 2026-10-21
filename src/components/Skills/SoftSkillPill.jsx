@@ -9,10 +9,6 @@ export function SoftSkillPill({ skill, delay }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay }}
       whileHover={{ y: -3 }}
-      style={{
-        background: `rgba(193, 11, 111, ${skill.level / 150})`,
-        border: `1px solid rgba(193, 11, 111, ${skill.level / 100})`,
-      }}
     >
       {skill.name}
       <div className={styles.skillLevelIndicator}>
@@ -20,9 +16,7 @@ export function SoftSkillPill({ skill, delay }) {
           <div
             key={i}
             className={styles.levelDot}
-            style={{
-              opacity: i < Math.floor(skill.level / 20) ? 1 : 0.3,
-            }}
+            data-lit={i < Math.floor(skill.level / 20)}
           />
         ))}
       </div>

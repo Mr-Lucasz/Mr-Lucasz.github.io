@@ -1,0 +1,94 @@
+.educationSection {
+  padding: 2.4rem 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  color: var(--pixel-mustard);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.06em;
+}
+
+.title {
+  font-family: var(--font-pixel);
+  font-size: 2.2rem;
+  color: var(--pixel-ink);
+  margin-bottom: 0.6rem;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--pixel-dim);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.card {
+  padding: 1.1rem 1.3rem;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.cardHead h3 {
+  font-family: var(--font-pixel);
+  font-size: 1.3rem;
+  color: var(--pixel-teal);
+}
+
+.badge {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  color: var(--pixel-bg-deep);
+  padding: 0.3rem 0.5rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.badgeOngoing {
+  background: var(--pixel-mustard);
+}
+
+.badgeCompleted {
+  background: var(--pixel-teal);
+}
+
+.degree {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--pixel-ink);
+  margin-top: 0.4rem;
+}
+
+.period {
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  color: var(--pixel-dim);
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.7rem;
+  }
+}

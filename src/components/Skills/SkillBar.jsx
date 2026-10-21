@@ -17,10 +17,9 @@ export function SkillBar({ skill, delay }) {
       <div className={styles.skillBarBackground}>
         <motion.div
           className={styles.skillBarFill}
-          initial={{ width: 0 }}
-          animate={{ width: `${skill.level}%` }}
-          transition={{ duration: 1, delay: delay + 0.3, type: "spring" }}
-          style={{ background: `linear-gradient(90deg, #c10b6f, #0bc1a8)` }}
+          initial={{ width: "0%" }}
+          animate={{ width: [`0%`, `${Math.min(skill.level + 8, 100)}%`, `${skill.level}%`] }}
+          transition={{ duration: 0.9, delay: delay + 0.2, times: [0, 0.75, 1], ease: "easeOut" }}
         />
       </div>
     </motion.div>

@@ -10,16 +10,24 @@ export function ExperienceTimeline() {
   const { t } = useTranslation();
   const experienceData = getExperienceData(t);
   const [openIdx, setOpenIdx] = useState(null);
-  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth <= 768);
+  // Começa assumindo desktop (mostra tudo) em vez de confiar em window.innerWidth
+  // no primeiro render — em alguns contextos (iframe/preview ainda sem layout
+  // definitivo) essa leitura vem 0 e a seção inteira ficava presa recolhida,
+  // escondendo os logos das empresas para sempre. Uma medição real após o
+  // mount corrige isso sem esconder conteúdo por padrão.
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    function handleResize() {
-      const mobile = window.innerWidth <= 768;
-      setIsMobile(mobile);
-      setOpenIdx(null); // Fecha todos ao trocar modo
+    function checkMobile() {
+      const mobile = window.innerWidth > 0 && window.innerWidth <= 768;
+      setIsMobile((prev) => {
+        if (prev !== mobile) setOpenIdx(null); // Fecha todos ao trocar modo
+        return mobile;
+      });
     }
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   const handleToggle = (idx) => {
@@ -39,9 +47,9 @@ export function ExperienceTimeline() {
             viewport={{ once: true, margin: "-50px" }}
           >
             <div className={styles.timelineDotModern}>
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="11" cy="11" r="10" stroke="#0bc1a8" strokeWidth="2.5" fill="#fff" />
-                <circle cx="11" cy="11" r="5" fill={idx % 2 === 0 ? '#c10b6f' : '#0bc1a8'} />
+              <svg width="18" height="18" viewBox="0 0 18 18" shapeRendering="crispEdges">
+                <rect x="0" y="0" width="18" height="18" fill="#0d0d1f" />
+                <rect x="3" y="3" width="12" height="12" fill={idx % 2 === 0 ? '#ff6f6f' : '#35d0b0'} />
               </svg>
             </div>
             {isMobile ? (
@@ -53,11 +61,7 @@ export function ExperienceTimeline() {
                   aria-controls={`exp-item-${idx}`}
                 >
                   <span className={styles.collapseTitle}><span className={styles.cargo}>{item.role}</span> <span className={styles.company}>{item.company}</span></span>
-                  <span className={styles.collapseArrowModern} aria-hidden="true">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6 9l5 5 5-5" stroke="#0bc1a8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </span>
+                  <span className={styles.collapseArrowModern} aria-hidden="true">▼</span>
                 </button>
               </div>
             ) : null}

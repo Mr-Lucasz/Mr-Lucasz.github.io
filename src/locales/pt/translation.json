@@ -1,92 +1,193 @@
 {
-  "welcome": "Bem-vindo ao meu portfólio!",
-  "about": "Sobre mim",
-  "contact": "Contato",
-  "projects": "Projetos",
-  "skills": "Habilidades",
-  "experiences": "Experiências",
+  "welcome": "Bem-vindo à minha run de currículo!",
+  "about": "Personagem",
+  "contact": "Guilda",
+  "projects": "Loot",
+  "skills": "Inventário",
+  "experiences": "Missões",
+  "education": "Origem",
+  "buffs": "Buffs",
   "play_button": "INICIAR",
-  "about_hello": "Olá, eu sou",
-  "about_role1": "Analista de Qualidade de Software",
-  "about_role2": "Engenheiro de QA Automation",
-  "about_role3": "Entusiasta de Tecnologia",
-  "about_role4": "Solucionador de Problemas",
-  "about_description": "Apaixonado por criar experiências digitais impecáveis e garantir excelência em software através de testes e automação. Combinando expertise técnica e criatividade para entregar soluções de alta qualidade.",
-  "about_connect": "Vamos nos conectar",
-  "about_viewwork": "Ver meus trabalhos",
-  "experiences_title_highlight": "Experiência",
-  "experiences_title": "Jornada",
-  "experiences_subtitle": "Onde inovação encontra execução",
-  "skills_title": "Matriz de Expertise em QA",
-  "skills_subtitle": "Competências de QA Sênior visualizadas por profundidade técnica e liderança em qualidade",
+  "play_subtitle": "Ficha de Personagem",
+  "play_hint": "Pressione INICIAR para carregar o save",
+  "about_banner": "UM BUG CRÍTICO EM PRODUÇÃO APARECEU!",
+  "about_stat_automation": "AUTOMAÇÃO",
+  "about_stat_rootcause": "CAUSA RAIZ",
+  "about_stat_leadership": "LIDERANÇA",
+  "about_role1": "Engenheiro de Software",
+  "about_role2": "QA Engineer Sênior",
+  "about_role3": "QA Automation Engineer",
+  "about_role4": "IA & Automação de Testes",
+  "about_description": "Missão principal: elevar a qualidade em cada camada do produto. Atuo como AI Champion no ecossistema AB InBev/BEES, construindo PoCs com agentes de IA e MCP, automação com Playwright, Cypress e Appium, e apoiando a expansão da plataforma pra novos mercados — todo bug crítico que aparece em produção é só mais um chefe que eu já derrotei antes.",
+  "about_menu_fight": "LUTAR",
+  "about_menu_items": "ITENS",
+  "about_menu_status": "STATUS",
+  "about_menu_flee": "FUGIR",
+  "about_menu_aria": "Menu de batalha — navegação principal",
+  "experiences_title_highlight": "Diário de",
+  "experiences_title": "Missões",
+  "experiences_subtitle": "Cada entrada é uma missão cumprida — nenhum chefe (bug) escapou sem ficar registrado no log.",
+  "education_eyebrow": "Origem do Personagem",
+  "education_title": "Formação Acadêmica",
+  "education_subtitle": "De onde vem o XP: a trilha de estudos por trás de cada skill equipada.",
+  "education_status_ongoing": "Em andamento",
+  "education_status_completed": "Concluído",
+  "education_list": [
+    {
+      "institution": "Universidade do Estado de Santa Catarina (UDESC)",
+      "degree": "Bacharelado em Engenharia de Software",
+      "period": "jan 2021 - 2026",
+      "status": "completed"
+    },
+    {
+      "institution": "Faculdade VINCIT",
+      "degree": "Pós-graduação Lato Sensu em Engenharia de Software com Ênfase em Qualidade e Teste",
+      "period": "dez 2025 - jul 2026",
+      "status": "ongoing"
+    }
+  ],
+  "buffs_eyebrow": "Efeitos de Status",
+  "buffs_title": "Buffs Ativos",
+  "buffs_subtitle": "Reputação na comunidade — cada aparição pública é um buff que fortalece o personagem fora das dungeons.",
+  "buffs_list": [
+    {
+      "icon": "🎤",
+      "role": "PALESTRANTE",
+      "event": "TDC Floripa — Trilha Quality Engineering e AI Testing",
+      "period": "2026",
+      "detail": "\"IA não resolve seus bugs: como usar RCA (Análise de Causa Raiz) e agentes para evoluir a qualidade de forma estratégica.\""
+    },
+    {
+      "icon": "🗣️",
+      "role": "PAINELISTA",
+      "event": "TDC Floripa — Community Lounge",
+      "period": "2026",
+      "detail": "Painel \"Qualidade e Cultura de Entrega: Por que Cobertura de Testes não Garante Cliente Feliz\", com Marcelo Mendonça Scheidt e Elisama Pires."
+    },
+    {
+      "icon": "🛠️",
+      "role": "COORDENADOR DE MINICURSOS",
+      "event": "SemESO 2025 — XII Seminário de Engenharia de Software",
+      "period": "set 2025",
+      "detail": "UDESC Alto Vale, Ibirama/SC — evento de palestras, minicursos, hackathon e gamificação."
+    }
+  ],
+  "skills_title": "Inventário de Habilidades",
+  "skills_subtitle": "Itens equipados depois de 8+ anos de grind em produção — passe o cursor pra ver o nível de cada um.",
   "skills_test_automation": "Automação de Testes",
   "skills_technical_stack": "Stack Técnico",
   "skills_qa_methodology": "Metodologia de QA",
   "skills_qa_leadership": "Liderança em QA",
-  "skills_certifications": "Certificações",
-  "skills_view_all_certifications": "Ver todas as certificações",
-  "projects_title": "Meu Portfólio de Projetos",
-  "projects_subtitle": "Soluções inovadoras que demonstram minha expertise técnica e criatividade",
-  "projects_live_demo": "Ver Demo",
+  "skills_certifications": "Conquistas Desbloqueadas",
+  "skills_view_all_certifications": "Ver todas as conquistas ↗",
+  "projects_title": "Baú de Loot",
+  "projects_subtitle": "Itens raros coletados em runs de cliente, ferramentas que eu mesmo craftei e projetos open source dropados de graça pra comunidade.",
+  "projects_live_demo": "Testar ao Vivo",
   "projects_view_code": "Ver Código",
-  "contact_title": "Vamos Conectar",
-  "contact_subtitle": "Tem um projeto em mente ou quer conversar sobre oportunidades? Entre em contato!",
-  "contact_info_title": "Informações de Contato",
-  "contact_info_subtitle": "Sinta-se à vontade para me chamar em qualquer canal:",
+  "projects_badge_nda": "Projeto de Cliente · NDA",
+  "projects_badge_own": "Projeto Próprio",
+  "projects_badge_opensource": "Open Source",
+  "projects_badge_internal": "Ferramenta Interna",
+  "projects_list": [
+    {
+      "title": "RCA Agent Lab",
+      "tagline": "Agente de IA que transforma planilhas de bugs em Root Cause Analysis rastreável, com dashboard HTML autocontido.",
+      "role": "Idealizei e construí a orquestração agente + skills, as métricas com denominadores auditáveis e o quality gate que só libera o dashboard depois da causa validada por um humano."
+    },
+    {
+      "title": "MCP Server para Zephyr, Jira e Confluence",
+      "tagline": "Servidor MCP que conecta agentes de IA (Claude, Cursor) direto ao Zephyr Scale, Jira e Confluence para gestão de testes.",
+      "role": "Construí do zero as ferramentas de MCP para criar e consultar test plans, ciclos e execuções, além de skills de IA para consolidar e otimizar cenários BDD automaticamente — usado no contexto AB InBev/BEES."
+    },
+    {
+      "title": "HolyHub — Plataforma de Gestão para Igrejas",
+      "tagline": "Ecossistema completo de microsserviços e micro-frontends: gateway, autenticação, membros, financeiro, eventos e engajamento.",
+      "role": "Arquitetei o sistema como meu TCC: API gateway centralizando autenticação JWT e autorização por papel, shell com Module Federation orquestrando 6 micro-frontends independentes."
+    },
+    {
+      "title": "CalcMed — QA de Unificação de Autenticação",
+      "tagline": "Suíte de testes BDD completa para unificar a autenticação de um ecossistema de saúde (Auth Central + Federação).",
+      "role": "Converti especificações funcionais em uma suíte BDD estruturada cobrindo 76 casos de teste, com matriz de rastreabilidade e documentação explícita de ambiguidades para o time de engenharia."
+    },
+    {
+      "title": "Automação Omnichannel de Leads",
+      "tagline": "Distribuição automática de leads de WhatsApp e Instagram para corretores, com round-robin e integrações Z-API/Meta.",
+      "role": "Projetei o motor de distribuição round-robin, webhooks e cron de feedback/aniversário; a base evoluiu para um SaaS multi-tenant com planos e billing."
+    },
+    {
+      "title": "Plataformas de Vistoria",
+      "tagline": "SaaS de vistorias e landing page de alta conversão, com calculadora de ROI e animações avançadas.",
+      "role": "Desenvolvi a interface completa em Next.js/Radix UI e a landing page com Framer Motion, bento grid de serviços e contadores animados para gerar leads qualificados."
+    },
+    {
+      "title": "E2E Workshop — Curso Open Source de Cypress",
+      "tagline": "Curso prático e gratuito de automação E2E com Cypress + Cucumber, em 4 módulos progressivos.",
+      "role": "Criei o curso completo — features BDD, Page Objects, pipeline de CI/CD e guias de estudo — para ajudar outros QAs a evoluir em automação."
+    }
+  ],
+  "contact_title": "Ponto de Save",
+  "contact_subtitle": "Encontrou um bug na minha run ou quer recrutar esse personagem pro seu time? Deixa a mensagem aqui.",
+  "contact_info_title": "Canais de Invocação",
+  "contact_info_subtitle": "Escolhe o canal e manda o sinal:",
   "contact_email": "E-mail",
-  "contact_form_name": "Seu Nome",
-  "contact_form_email": "E-mail",
-  "contact_form_subject": "Assunto",
-  "contact_form_message": "Sua Mensagem",
-  "contact_form_send": "Enviar Mensagem",
-  "contact_form_success": "Mensagem enviada com sucesso! Obrigado pelo contato. Em breve retornarei para você.",
-  "contact_form_error": "Erro ao enviar. Tente novamente ou envie um email diretamente.",
-  "contact_form_sending": "Enviando...",
+  "contact_form_name": "Nome do Herói",
+  "contact_form_email": "Pergaminho de Retorno (e-mail)",
+  "contact_form_subject": "Título da Quest",
+  "contact_form_message": "Mensagem para o NPC",
+  "contact_form_send": "Enviar Sinal",
+  "contact_form_success": "Item adquirido: mensagem enviada! Em breve o personagem responde.",
+  "contact_form_error": "A investida falhou. Tenta de novo ou chama direto por e-mail.",
+  "contact_form_sending": "Enviando sinal...",
   "experiences_list": [
     {
       "company": "Levva Tecnologia",
       "role": "Analista de QA Sênior",
       "period": "abr 2025 - o momento",
-      "location": "Remoto",
+      "location": "Campinas, SP",
       "description": [
-        "QA Sênior em projetos de transformação digital com foco em performance, qualidade e confiabilidade.",
-        "Execução de testes manuais e automatizados (funcionais, exploratórios e de performance).",
-        "Criação de planos, casos e cenários de testes (funcionais e não-funcionais).",
-        "Validação de APIs, testes de banco de dados e testes de segurança.",
-        "Mentoria e suporte técnico para profissionais de QA Pleno e Júnior.",
-        "Colaboração ativa em iniciativas de melhoria contínua dos processos de qualidade e cultura ágil."
+        "Liderança da estratégia de qualidade em múltiplos projetos e releases do ecossistema AB InBev/BEES, aplicando Shift Left de ponta a ponta.",
+        "Atuação como AI Champion, promovendo o uso de IA em QA, automação e análise de defeitos, e criando ferramentas e rotinas para o time.",
+        "Desenvolvimento de PoCs com AI Agents e MCP (Model Context Protocol) aplicados à Engenharia de Qualidade.",
+        "Participação na expansão internacional da plataforma, com setup e validação de ambientes para Chile, Equador e Ilhas Canárias/Espanha.",
+        "Suporte técnico e de qualidade a parceiros estratégicos como Nestlé e Okajima.",
+        "Automação Web e Mobile com Playwright, Cypress e Appium; testes de APIs, banco de dados, RabbitMQ, Kafka e eventos com Segment e New Relic.",
+        "Gestão de testes regressivos com Zephyr Scale, KPIs de qualidade e Root Cause Analysis (RCA) com IA aplicada.",
+        "Mentoria de profissionais de QA e colaboração direta com Produto e Engenharia no refinamento de requisitos."
       ],
-      "skills": ["Cypress", "K6", "Postman", "CI/CD", "Mentoria", "OKRs", "Mobile Testing"]
+      "skills": ["Playwright", "Cypress", "Appium", "AI Agents", "MCP", "RabbitMQ", "Zephyr Scale"]
     },
     {
-      "company": "IATEC",
+      "company": "IATec - Instituto Adventista de Tecnologia",
       "role": "Analista de Qualidade Pleno",
       "period": "dez 2024 - mar 2025",
-      "location": "Remoto",
+      "location": "Hortolândia, SP",
       "description": [
         "Planejamento e execução de testes funcionais, de regressão e automação.",
         "Automação de testes com frameworks modernos para web e APIs.",
         "Integração de testes contínuos em pipelines de CI/CD.",
         "Testes de performance e carga.",
         "Colaboração direta com times de desenvolvimento para antecipação de falhas e melhoria contínua.",
-        "Participação em cerimônias ágeis, garantindo alinhamento entre qualidade e entrega."
+        "Aplicação do processo de análise de defeitos e identificação de causa raiz.",
+        "Pair Unit Testing com o time de desenvolvimento.",
+        "Aplicação de técnicas e estratégias de teste para criação de planos de teste."
       ],
-      "skills": ["CI/CD", "Análise de Defeitos", "Scrum", "Manual Testing", "Report Defects"]
+      "skills": ["CI/CD", "Análise de Defeitos", "Scrum", "Manual Testing", "Pair Testing"]
     },
     {
       "company": "BEES Brasil",
       "role": "Quality Analyst",
       "period": "dez 2022 - dez 2024",
-      "location": "Remoto",
+      "location": "Campinas, SP",
       "description": [
-        "Uso de testes automatizados com Cypress e Cucumber.",
+        "Automação de testes com Cypress e Cucumber.",
         "Validação de endpoints e APIs utilizando mocks.",
         "Integração com Azure DevOps e pipeline de integração contínua.",
         "Testes backend de validação de contratos e APIs/services com Postman.",
-        "Planejamento e execução de testes manuais e automatizados.",
-        "Testes de performance com K6 e testes de dispositivos móveis."
+        "Gerenciamento de projetos e integração com vários times via Jira.",
+        "Planejamento e execução de testes manuais e automatizados, com participação ativa na melhoria do produto.",
+        "Testes de performance com K6 e testes de dispositivos móveis: regressão em releases, geolocalização e permissões, banco de dados no Android Studio, depuração de logs e validação de builds."
       ],
-      "skills": ["Cypress", "Cucumber", "Postman", "Azure DevOps", "K6", "Jira", "Mobile Testing", "Web Testing"]
+      "skills": ["Cypress", "Cucumber", "Postman", "Azure DevOps", "K6", "Jira", "Mobile Testing"]
     },
     {
       "company": "Cognyte",
@@ -94,20 +195,33 @@
       "period": "out 2021 - dez 2022",
       "location": "Florianópolis, SC",
       "description": [
-        "Estratégias, planejamento e execução de testes.",
-        "Testes ágeis e integração com desenvolvimento.",
-        "Garantia de qualidade via validação de testes.",
-        "Automação de cenários de testes.",
-        "Análise de requisitos e mapeamento de cenários.",
-        "Cobertura de qualidade em metodologias ágeis."
+        "Estratégias, planejamento e execução de testes em metodologias ágeis.",
+        "Técnicas especializadas de automação e integração direta com o time de desenvolvimento.",
+        "Análise de requisitos e mapeamento de cenários de teste.",
+        "Identificação e validação de defeitos, com melhoria contínua dos processos.",
+        "Desenvolvimento de processos, práticas e arquitetura de teste de software."
       ],
-      "skills": ["Testes Funcionais", "Automação", "Kanban", "SQL", "Testes Ágeis", "Scrum", "Gitlab"]
+      "skills": ["Testes Funcionais", "Automação", "Kanban", "SQL", "Scrum", "Gitlab"]
+    },
+    {
+      "company": "Cognyte",
+      "role": "QA Intern",
+      "period": "jun 2021 - out 2021",
+      "location": "Florianópolis, SC",
+      "description": [
+        "Compreensão de requisitos de software e escrita de cenários de teste.",
+        "Execução de testes e registro de defeitos encontrados.",
+        "Validação de defeitos corrigidos.",
+        "Participação em melhorias e desenvolvimento de novos processos e práticas de teste.",
+        "Automação de cenários de teste."
+      ],
+      "skills": ["Testes Funcionais", "Documentação de Defeitos", "QA"]
     },
     {
       "company": "YOUDevelop",
       "role": "Product Owner",
       "period": "jan 2022 - nov 2022",
-      "location": "Remoto",
+      "location": "São Paulo, SP",
       "description": [
         "Definição da visão do produto e gestão do backlog.",
         "Engajamento com stakeholders e planejamento de entregas.",

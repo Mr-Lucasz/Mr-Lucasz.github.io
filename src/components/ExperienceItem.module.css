@@ -1,177 +1,124 @@
 /* ExperienceItem.module.css */
 .item {
   display: flex;
-  align-items: center;
-  gap: 2rem;
+  align-items: flex-start;
+  gap: 1.2rem;
   width: 100%;
 }
 
 .logo {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  width: 56px;
+  height: 56px;
+  flex: none;
+  border: 3px solid var(--pixel-border);
+  border-radius: 4px;
+  background: var(--pixel-panel);
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Remova o padding para a imagem ocupar todo o espaço */
-  padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  overflow: hidden;
 }
 
 .logo img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Troque para cover para preencher todo o espaço */
-  border-radius: 50%;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+  object-fit: cover;
+  image-rendering: pixelated;
 }
 
 .card {
-  background: rgba(30, 30, 30, 0.6);
-  padding: 2rem;
-  border-radius: 1rem;
+  background: var(--pixel-panel);
+  border: 3px solid var(--pixel-border);
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 var(--pixel-border);
+  padding: 1.2rem 1.3rem;
   flex: 1;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(to bottom, #c10b6f, #0bc1a8);
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-  background: rgba(40, 40, 40, 0.7);
 }
 
 .cardHeader {
-  margin-bottom: 1.5rem;
-  position: relative;
+  margin-bottom: 1rem;
 }
 
 .card h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.5rem;
-  color: #fff;
-  font-weight: 600;
-  background: linear-gradient(90deg, #c10b6f 0%, #0bc1a8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin: 0 0 0.3rem 0;
+  font-family: var(--font-pixel);
+  font-size: 1.4rem;
+  color: var(--pixel-teal);
 }
 
 .company {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #bbb;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--pixel-ink);
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 .period {
-  font-size: 0.9rem;
-  color: #888;
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  color: var(--pixel-dim);
   display: block;
 }
 
 .description {
-  margin: 1.5rem 0;
-  padding-left: 1.5rem;
+  margin: 1.1rem 0;
+  padding-left: 0;
   list-style: none;
-  font-size: 1rem;
-  line-height: 1.7;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--pixel-ink);
 }
 
 .description li {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: 1.3rem;
 }
 
 .description li::before {
-  content: "▹";
+  content: "▸";
   position: absolute;
   left: 0;
-  color: #c10b6f;
+  color: var(--pixel-mustard);
 }
 
 .badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-top: 1.5rem;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
 }
 
 .badge {
-  background: rgba(193, 11, 111, 0.15);
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
+  font-family: var(--font-pixel);
   font-size: 0.85rem;
-  color: #fff;
-  font-weight: 500;
-  border: 1px solid rgba(193, 11, 111, 0.3);
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
-}
-
-.badge:hover {
-  background: rgba(193, 11, 111, 0.3);
-  transform: translateY(-2px);
+  background: var(--pixel-bg-deep);
+  padding: 0.25rem 0.6rem;
+  border: 2px solid var(--pixel-border);
+  border-radius: 3px;
+  color: var(--pixel-dim);
 }
 
 @media screen and (max-width: 768px) {
   .item {
     flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-  }
-  .logo {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 0.7rem auto;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    text-align: center;
+    gap: 0.6rem;
   }
   .card {
-    padding: 1.1rem 1rem 1.2rem 1rem;
-    margin: 0;
-    border-radius: 1rem;
-    box-shadow: 0 2px 10px 0 rgba(11,193,168,0.08);
+    padding: 1rem;
   }
   .cardHeader {
-    margin-bottom: 1.1rem;
     text-align: center;
   }
   .card h3 {
-    font-size: 1.3rem;
-  }
-  .description {
-    margin: 1.1rem 0 0.5rem 0.2rem;
-    padding-left: 0.7rem;
-    font-size: 0.97rem;
-  }
-  .description li {
-    padding-left: 1.1rem;
+    font-size: 1.25rem;
   }
   .badges {
-    margin-top: 1rem;
     justify-content: center;
   }
 }

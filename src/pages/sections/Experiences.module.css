@@ -1,94 +1,39 @@
-/* Experiences.module.css */
 .sectionExperiences {
-  padding: 2rem 2rem;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.426) 0%, rgba(8, 8, 10, 0.95) 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.sectionExperiences::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(193, 11, 111, 0.1) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(11, 193, 168, 0.1) 0%, transparent 40%);
-  z-index: 0;
+  padding: 2.4rem 1.2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 1.6rem;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  color: var(--pixel-mustard);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.06em;
 }
 
 .title {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  font-weight: 700;
-  background: linear-gradient(90deg, #0bc1a8 10%, #e0d4db 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  display: inline-block;
-}
-.title {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  font-weight: 700;
-  position: relative;
-  display: inline-block;
+  font-family: var(--font-pixel);
+  font-size: 2.2rem;
+  color: var(--pixel-ink);
+  margin-bottom: 0.6rem;
 }
 
-.titleHighlight {
-  background: linear-gradient(90deg, #fef9fc 0%, #0bc1a8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline;
-}
-
-.titleHighlight::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #ffffff 0%, #0bc1a8 100%);
-  border-radius: 3px;
-}
 .subtitle {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.7);
-  max-width: 600px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--pixel-dim);
+  max-width: 480px;
   margin: 0 auto;
-  font-weight: 300;
 }
 
-@media (max-width: 1024px) {
-  .title {
-    font-size: 2.2rem;
-  }
-}
 @media (max-width: 768px) {
   .title {
-    font-size: 1.5rem;
-  }
-  
-  .subtitle {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .title {
-    font-size: 1.1rem;
+    font-size: 1.7rem;
   }
 }

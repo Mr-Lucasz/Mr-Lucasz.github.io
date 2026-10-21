@@ -1,287 +1,128 @@
 /* Skills.module.css */
 .skillsSection {
-  padding: 2rem 2rem;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.426) 0%, rgba(8, 8, 10, 0.95) 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.skillsSection::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(circle at 10% 20%, rgba(28, 22, 26, 0.1) 0%, transparent 30%),
-    radial-gradient(circle at 90% 80%, rgba(17, 27, 25, 0.1) 0%, transparent 30%);
-  z-index: 0;
+  padding: 2.4rem 1.2rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 1.6rem;
 }
 
 .title {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  font-weight: 700;
-  position: relative;
-  display: inline-block;
-}
-
-.highlight {
-  background: linear-gradient(90deg, #c10b6f 0%, #0bc1a8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-}
-
-.highlight::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #c10b6f71 0%, #0bc1a8 100%);
-  border-radius: 3px;
+  font-family: var(--font-pixel);
+  font-size: 2.2rem;
+  color: var(--pixel-ink);
+  margin-bottom: 0.6rem;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.7);
-  max-width: 600px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--pixel-dim);
+  max-width: 560px;
   margin: 0 auto;
-  font-weight: 300;
 }
 
 .dashboard {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  position: relative;
-  z-index: 1;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
+  gap: 1.2rem;
   width: 100%;
   box-sizing: border-box;
 }
 
 .skillCategory {
-  background: rgba(30, 30, 46, 0.897);
-  backdrop-filter: blur(10px);
-  border-radius: 1rem;
-  padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: var(--pixel-panel);
+  border: 3px solid var(--pixel-border);
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 var(--pixel-border);
+  padding: 1.3rem 1.4rem;
   width: 100%;
   min-width: 280px;
-  flex: 1 1 350px;
+  flex: 1 1 340px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
 
 .categoryTitle {
-  font-size: 1.5rem;
-  color: #fff;
-  margin-bottom: 1.5rem;
+  font-family: var(--font-pixel);
+  font-size: 1.4rem;
+  color: var(--pixel-ink);
+  margin-bottom: 1.1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.techIcon, .testIcon, .softIcon, .certIcon {
-  font-size: 1.3rem;
+.techIcon, .testIcon, .softIcon, .certIcon, .qaIcon, .leadIcon {
+  font-size: 1.2rem;
 }
-
-.techIcon { color: #0bc1a8; }
-.testIcon { color: #c10b6f; }
-.softIcon { color: #ffb700; }
-.certIcon { color: #fff; }
 
 .skillsGrid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-/* Radial Skill Styles */
-.radialSkillsContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  gap: 1.5rem;
-}
-
-.radialSkill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: default;
-}
-
-.radialSvg {
-  margin-bottom: 0.5rem;
-}
-
-.radialBackground {
-  fill: none;
-  stroke: rgba(255, 255, 255, 0.1);
-}
-
-.radialProgress {
-  fill: none;
-  stroke: url(#radialGradient);
-  stroke-linecap: round;
-}
-
-.radialInfo {
-  text-align: center;
-}
-
-.radialIcon {
-  font-size: 1.5rem;
-  display: block;
-  margin-bottom: 0.2rem;
-}
-
-.radialName {
-  font-size: 0.8rem;
-  color: #fff;
-  display: block;
-  margin-bottom: 0.2rem;
-}
-
-.radialPercent {
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-/* Soft Skills Styles */
 .softSkillsContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.6rem;
 }
 
-/* Certifications Styles */
 .certifications {
-  grid-column: 1 / -1;
+  width: 100%;
+  flex: 1 1 100%;
 }
 
 .certificationsGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  gap: 1rem;
   width: 100%;
   box-sizing: border-box;
-}
-
-@media (max-width: 1024px) {
-  .skillsSection {
-    padding: 1.5rem 1.2rem;
-  }
-  .dashboard {
-    gap: 1.2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  .skillCategory {
-    min-width: 220px;
-    flex: 1 1 100%;
-  }
-  .certificationsGrid {
-    gap: 1rem;
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
-  }
-  .radarChartContainer {
-    padding: 1.2rem 0.2rem;
-  }
-  .title {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .skillsSection {
-    padding: 1rem 0.5rem;
-  }
-  .dashboard {
-    flex-direction: column;
-    gap: 0.7rem;
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
-  }
-  .skillCategory {
-    min-width: 0;
-    flex: 1 1 100%;
-  }
-  .certificationsGrid {
-    gap: 0.5rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .title {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .skillsSection {
-    padding: 0.5rem 0.2rem;
-  }
-  .dashboard {
-    gap: 0.6rem;
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
-  }
-  .skillCategory {
-    padding: 1rem;
-  }
-  .certificationsGrid {
-    gap: 0.6rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .title {
-    font-size: 1.1rem;
-  }
 }
 
 .radarChartContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 1.4rem 0.6rem;
 }
 
 .certLink {
-  padding-top: 1rem;
+  padding-top: 1.1rem;
 }
 
 .certLink a {
-  color: #fff;
+  font-family: var(--font-pixel);
+  color: var(--pixel-teal);
   text-decoration: none;
-  font-size: 1.25rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-size: 1.15rem;
 }
 
-.certLink a:hover {
-  color: #c10b6f;
-  text-decoration: underline;
+.certLink a:hover,
+.certLink a:focus-visible {
+  color: var(--pixel-mustard);
 }
 
+@media (max-width: 1024px) {
+  .skillCategory {
+    min-width: 220px;
+    flex: 1 1 100%;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+}
 
-
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+}

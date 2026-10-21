@@ -1,0 +1,55 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 111, 111, 0.12) 0%,
+    rgba(255, 207, 86, 0.12) 20%,
+    rgba(53, 208, 176, 0.12) 40%,
+    rgba(255, 111, 111, 0.12) 60%
+  );
+  background-size: 200% 100%;
+  animation: godmode-sweep 1.2s linear infinite;
+}
+
+.banner {
+  font-family: var(--font-display);
+  font-size: clamp(0.9rem, 4vw, 1.6rem);
+  color: var(--pixel-mustard);
+  text-shadow: 3px 3px 0 var(--pixel-border);
+  animation: godmode-pop 0.4s steps(3);
+}
+
+.sub {
+  font-family: var(--font-pixel);
+  font-size: 1.3rem;
+  color: var(--pixel-ink);
+  text-shadow: 2px 2px 0 var(--pixel-border);
+}
+
+@keyframes godmode-sweep {
+  from { background-position: 0% 0; }
+  to { background-position: 200% 0; }
+}
+
+@keyframes godmode-pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay {
+    animation: none;
+    background: rgba(255, 207, 86, 0.1);
+  }
+  .banner {
+    animation: none;
+  }
+}

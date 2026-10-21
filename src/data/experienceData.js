@@ -5,7 +5,7 @@ import cognyteLogo from "../../src/assets/cognyte_logo.png";
 import youdevelopLogo from "../../src/assets/you_logo.png";
 
 export function getExperienceData(t) {
-  const logos = [levvaLogo, iatecLogo, beesLogo, cognyteLogo, youdevelopLogo];
+  const logos = [levvaLogo, iatecLogo, beesLogo, cognyteLogo, cognyteLogo, youdevelopLogo];
   const list = t("experiences_list", { returnObjects: true });
   return list.map((exp, idx) => ({
     ...exp,

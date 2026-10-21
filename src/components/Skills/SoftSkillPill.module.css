@@ -1,14 +1,15 @@
 /* SoftSkillPill.module.css */
 .softSkillPill {
-  padding: 0.6rem 1rem;
-  border-radius: 50px;
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  background: var(--pixel-bg-deep);
+  border: 2px solid var(--pixel-border);
+  border-radius: 4px;
+  color: var(--pixel-ink);
+  font-family: var(--font-pixel);
+  font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: all 0.3s ease;
   cursor: default;
 }
 .skillLevelIndicator {
@@ -18,6 +19,8 @@
 .levelDot {
   width: 6px;
   height: 6px;
-  border-radius: 50%;
-  background: #fff;
+  background: var(--pixel-border);
+}
+.levelDot[data-lit="true"] {
+  background: var(--pixel-mustard);
 }

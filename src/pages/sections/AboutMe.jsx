@@ -1,123 +1,129 @@
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-import styles from "./AboutMe.module.css";
-import Lottie from "lottie-react";
-import animationData from "../../assets/AboutMe.json";
+import { useRef, useState } from "react";
+import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import styles from "./AboutMe.module.css";
+import { usePixelReveal } from "../../hooks/usePixelReveal";
+import { skillsData } from "../../data/skillsData";
+import { playHover, playClick, playHit } from "../../lib/sfx";
+
+const HERO_STATS = [
+  { key: "automation", labelKey: "about_stat_automation", value: skillsData.qaTechnical[0].level },
+  { key: "rootcause", labelKey: "about_stat_rootcause", value: skillsData.qaProcess.find((s) => s.name.startsWith("Root Cause"))?.level ?? 90 },
+  { key: "leadership", labelKey: "about_stat_leadership", value: skillsData.leadership.find((s) => s.name === "AI Champion")?.level ?? skillsData.leadership[0].level },
+];
+
+const BATTLE_MENU = [
+  { to: "projects", actionKey: "about_menu_fight", labelKey: "projects" },
+  { to: "skills", actionKey: "about_menu_items", labelKey: "skills" },
+  { to: "experiences", actionKey: "about_menu_status", labelKey: "experiences" },
+  { to: "contact", actionKey: "about_menu_flee", labelKey: "contact" },
+];
+
+const HITS = ["CRIT!", "-99", "MISS?!", "-1", "OW!", "-42"];
+
+function BugSprite({ onHit, hitClass, hitLabel }) {
+  return (
+    <div className={styles.bugWrap}>
+      <svg
+        className={`${styles.bugSprite} ${hitClass ? styles.bugHit : ""}`}
+        width="86"
+        height="70"
+        viewBox="0 0 43 35"
+        shapeRendering="crispEdges"
+        role="img"
+        aria-hidden="true"
+        onClick={onHit}
+      >
+        <rect x="16" y="6" width="11" height="4" fill="#ff6f6f" />
+        <rect x="12" y="10" width="19" height="14" fill="#ff8b8b" />
+        <rect x="8" y="14" width="4" height="8" fill="#ff6f6f" />
+        <rect x="31" y="14" width="4" height="8" fill="#ff6f6f" />
+        <rect x="14" y="24" width="4" height="7" fill="#2a1414" />
+        <rect x="25" y="24" width="4" height="7" fill="#2a1414" />
+        <rect x="16" y="13" width="4" height="4" fill="#181934" />
+        <rect x="23" y="13" width="4" height="4" fill="#181934" />
+        <rect x="2" y="8" width="8" height="2" fill="#ff6f6f" />
+        <rect x="33" y="8" width="8" height="2" fill="#ff6f6f" />
+      </svg>
+      {hitLabel && <span className={styles.hitLabel} key={hitLabel.id}>{hitLabel.text}</span>}
+    </div>
+  );
+}
 
 export function AboutMe() {
   const { t } = useTranslation();
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true
-  });
+  const [ref] = usePixelReveal();
+  const [hitClass, setHitClass] = useState(false);
+  const [hitLabel, setHitLabel] = useState(null);
+  const hitTimeout = useRef(null);
 
-  function handleContactClick() {
-    document.querySelector("#contact").scrollIntoView({
-      behavior: "smooth",
-    });
+  function handleHit() {
+    playHit();
+    setHitClass(true);
+    setHitLabel({ id: Date.now(), text: HITS[Math.floor(Math.random() * HITS.length)] });
+    clearTimeout(hitTimeout.current);
+    hitTimeout.current = setTimeout(() => setHitClass(false), 260);
   }
 
   return (
-    <motion.section
-      id="about"
-      className={styles.sectionAbout}
-      ref={ref}
-      initial={{ opacity: 0 }}
-      animate={inView ? { opacity: 1 } : {}}
-      transition={{ duration: 0.8 }}
-    >
-      <div className={styles.backgroundPattern}></div>
-      
-      <div className={styles.container}>
-        <motion.aside 
-          className={styles.aside}
-          initial={{ opacity: 0, x: -50 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <motion.h2 
-            className={styles.glitchText}
-            whileHover={{ scale: 1.05 }}
+    <section id="about" className={styles.sectionAbout} ref={ref}>
+      <p className={styles.banner}>{t("about_banner")}</p>
+
+      <div className={styles.stage}>
+        <BugSprite onHit={handleHit} hitClass={hitClass} hitLabel={hitLabel} />
+      </div>
+
+      <div className={`${styles.statsPanel} pixel-panel`}>
+        {HERO_STATS.map((stat) => (
+          <div className={styles.statRow} key={stat.key}>
+            <span className={styles.statLabel}>{t(stat.labelKey)}</span>
+            <div className={styles.statBar}>
+              <div className={styles.statBarFill} style={{ width: `${stat.value}%` }} />
+            </div>
+            <span className={styles.statValue}>{stat.value}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className={`${styles.dialogue} pixel-panel`}>
+        <p className={styles.dialogueName}>LUCAS RODRIGUES</p>
+        <TypeAnimation
+          className={styles.dialogueRole}
+          sequence={[
+            t("about_role1"),
+            1500,
+            t("about_role2"),
+            1500,
+            t("about_role3"),
+            1500,
+            t("about_role4"),
+            1500,
+          ]}
+          wrapper="p"
+          speed={50}
+          repeat={Infinity}
+        />
+        <p className={styles.dialogueText}>{t("about_description")}</p>
+      </div>
+
+      <nav className={styles.battleMenu} aria-label={t("about_menu_aria")}>
+        {BATTLE_MENU.map((item) => (
+          <Link
+            key={item.to}
+            to={item.to}
+            className={styles.menuItem}
+            smooth
+            duration={700}
+            offset={-96}
+            onMouseEnter={playHover}
+            onClick={playClick}
           >
-            <span className={styles.gradientText}>{t('about_hello')}</span><br/>
-            <span className={styles.nameHighlight}>Lucas Rodrigues</span>
-          </motion.h2>
-
-          <TypeAnimation
-            className={styles.subtitle}
-            sequence={[
-              t('about_role1'),
-              1500,
-              t('about_role2'),
-              1500,
-              t('about_role3'),
-              1500,
-              t('about_role4'),
-              1500
-            ]}
-            wrapper="h3"
-            speed={50}
-            repeat={Infinity}
-          />
-
-          <motion.p className={styles.description}>
-            {t('about_description')}
-          </motion.p>
-
-          <div className={styles.buttonContainer}>
-            <motion.button 
-              className={styles.contactButton}
-              onClick={handleContactClick}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span>{t('about_connect')}</span>
-              <div className={styles.buttonHoverEffect}></div>
-            </motion.button>
-
-            <motion.a 
-              href="#projects" 
-              className={styles.projectsButton}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {t('about_viewwork')}
-            </motion.a>
-          </div>
-        </motion.aside>
-
-        <motion.aside 
-          className={styles.aside2}
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={inView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          <div className={styles.animationContainer}>
-            <Lottie 
-              animationData={animationData} 
-              className={styles.lottieAnimation}
-            />
-            <div className={styles.animationGlow}></div>
-          </div>
-        </motion.aside>
-      </div>
-
-      <div className={styles.scrollIndicator}>
-        <motion.div
-          animate={{
-            y: [0, 10, 0],
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            repeatType: "loop",
-          }}
-        >
-          ↓
-        </motion.div>
-      </div>
-    </motion.section>
+            <span className={styles.menuAction}>{t(item.actionKey)}</span>
+            <span className={styles.menuLabel}>{t(item.labelKey)}</span>
+          </Link>
+        ))}
+      </nav>
+    </section>
   );
 }

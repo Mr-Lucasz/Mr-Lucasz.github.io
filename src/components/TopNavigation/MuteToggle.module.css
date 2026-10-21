@@ -1,0 +1,19 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  background: var(--pixel-panel);
+  border: 2px solid var(--pixel-border);
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.6rem;
+  flex: none;
+}
+
+.toggle:hover,
+.toggle:focus-visible {
+  border-color: var(--pixel-mustard);
+}

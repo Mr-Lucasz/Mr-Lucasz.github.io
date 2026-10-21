@@ -6,29 +6,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-pixel);
+  font-size: 1.05rem;
 }
 .skillIcon {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .skillName {
   flex-grow: 1;
   margin-left: 0.5rem;
-  color: #fff;
-  font-weight: 500;
+  color: var(--pixel-ink);
 }
 .skillPercent {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
+  color: var(--pixel-dim);
+  font-size: 0.95rem;
 }
 .skillBarBackground {
   width: 100%;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  height: 10px;
+  background: var(--pixel-bg-deep);
+  border: 1px solid var(--pixel-border);
+  border-radius: 2px;
   overflow: hidden;
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent 0,
+    transparent 7px,
+    var(--pixel-border) 7px,
+    var(--pixel-border) 8px
+  );
 }
 .skillBarFill {
   height: 100%;
-  border-radius: 4px;
+  background: var(--pixel-teal);
 }

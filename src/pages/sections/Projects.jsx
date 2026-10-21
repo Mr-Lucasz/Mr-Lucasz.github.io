@@ -1,55 +1,55 @@
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import styles from "./Projects.module.css";
+import { getProjectsData } from "../../data/projectsData";
+import { usePixelReveal } from "../../hooks/usePixelReveal";
 
-// Nenhum projeto real cadastrado ainda
-const projectsData = [];
+function ProjectCard({ project, t }) {
+  return (
+    <div className={`${styles.projectCard} ${styles[`rarity-${project.rarity}`]}`}>
+      <span className={`${styles.badge} ${styles[`badge-${project.badge}`]}`}>
+        {project.badgeLabel}
+      </span>
+      <div className={styles.projectContent}>
+        <h3>{project.title}</h3>
+        <p className={styles.tagline}>{project.tagline}</p>
+        <p className={styles.role}>{project.role}</p>
+        <div className={styles.projectTags}>
+          {project.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
+        {project.codeUrl && (
+          <a
+            href={project.codeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.codeLink}
+          >
+            {t("projects_view_code")}
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
 
 export function Projects() {
   const { t } = useTranslation();
-  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [ref] = usePixelReveal();
+  const projects = getProjectsData(t);
 
   return (
-    <motion.section
-      id="projects"
-      className={styles.projectsSection}
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8 }}
-    >
+    <section id="projects" className={styles.projectsSection} ref={ref}>
       <div className={styles.header}>
-        <motion.h2
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.3 }}
-          className={styles.title}
-        >
-          {t('projects_title')}
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.5 }}
-          className={styles.subtitle}
-        >
-          {t('projects_subtitle')}
-        </motion.p>
+        <h2 className={styles.title}>{t("projects_title")}</h2>
+        <p className={styles.subtitle}>{t("projects_subtitle")}</p>
       </div>
 
-      <motion.div 
-        className={styles.projectsGrid}
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
-        transition={{ delay: 0.7 }}
-      >
-        {/* Banner de em construção */}
-        <div className={styles.underConstruction}>
-          <span role="img" aria-label="Em construção" className={styles.constructionIcon}>🚧</span>
-          <span>Mais projetos em breve! (Em construção)</span>
-        </div>
-      </motion.div>
-    </motion.section>
+      <div className={styles.projectsGrid}>
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} t={t} />
+        ))}
+      </div>
+    </section>
   );
 }
