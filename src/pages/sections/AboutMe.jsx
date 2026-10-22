@@ -121,6 +121,18 @@ export function AboutMe() {
             <span className={styles.menuLabel}>{t(item.labelKey)}</span>
           </Link>
         ))}
+        {/* "ponto de save" do recrutador: CV em PDF */}
+        <a
+          href={`${import.meta.env.BASE_URL}${t("cv_file")}`}
+          download
+          className={`${styles.menuItem} ${styles.menuItemWide}`}
+          aria-label={t("cv_download_aria")}
+          onMouseEnter={playHover}
+          onClick={playClick}
+        >
+          <span className={styles.menuAction}>{t("about_menu_save")}</span>
+          <span className={styles.menuLabel}>{t("cv_label")}</span>
+        </a>
       </nav>
     </section>
   );

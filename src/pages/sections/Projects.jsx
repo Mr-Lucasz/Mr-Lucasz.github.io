@@ -6,10 +6,10 @@ import { usePixelReveal } from "../../hooks/usePixelReveal";
 function ProjectCard({ project, t }) {
   return (
     <div className={`${styles.projectCard} ${styles[`rarity-${project.rarity}`]}`}>
-      <span className={`${styles.badge} ${styles[`badge-${project.badge}`]}`}>
-        {project.badgeLabel}
-      </span>
       <div className={styles.projectContent}>
+        <span className={`${styles.badge} ${styles[`badge-${project.badge}`]}`}>
+          {project.badgeLabel}
+        </span>
         <h3>{project.title}</h3>
         <p className={styles.tagline}>{project.tagline}</p>
         <p className={styles.role}>{project.role}</p>

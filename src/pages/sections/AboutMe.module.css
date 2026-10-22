@@ -191,6 +191,13 @@
   border-color: var(--pixel-mustard);
 }
 
+.menuItemWide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .menuAction {
   font-family: var(--font-display);
   font-size: 0.68rem;

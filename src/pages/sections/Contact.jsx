@@ -120,6 +120,16 @@ export function Contact() {
                 <a href="https://github.com/Mr-Lucasz" target="_blank" rel="noopener noreferrer">github.com/Mr-Lucasz</a>
               </div>
             </div>
+
+            <div className={styles.contactItem}>
+              <div className={styles.contactIcon}>📜</div>
+              <div>
+                <h4>{t('cv_label')}</h4>
+                <a href={`${import.meta.env.BASE_URL}${t('cv_file')}`} download aria-label={t('cv_download_aria')}>
+                  {t('about_menu_save')}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 

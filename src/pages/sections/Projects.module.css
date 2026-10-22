@@ -63,17 +63,16 @@
 .rarity-rare::before { background: var(--pixel-coral); }
 .rarity-legendary::before { background: var(--pixel-mustard); }
 
+/* selo no fluxo, acima do título — absoluto ele cobria títulos longos */
 .badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  display: inline-block;
+  margin-bottom: 0.7rem;
   padding: 0.25rem 0.6rem;
   border: 2px solid var(--pixel-border);
   border-radius: 3px;
   font-family: var(--font-pixel);
   font-size: 0.85rem;
   letter-spacing: 0.02em;
-  z-index: 1;
 }
 
 .badge-nda { background: var(--pixel-bg-deep); color: var(--pixel-coral); }
@@ -90,7 +89,6 @@
   font-size: 1.35rem;
   color: var(--pixel-ink);
   margin-bottom: 0.5rem;
-  padding-right: 4rem;
 }
 
 .tagline {

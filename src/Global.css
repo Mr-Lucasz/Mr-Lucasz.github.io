@@ -48,11 +48,9 @@ body {
   color: var(--pixel-ink);
 }
 
+/* scroll-padding só vale no container que rola (html) — no main era ignorado */
 html {
   scroll-behavior: smooth;
-}
-
-main {
   scroll-padding-top: 6rem;
 }
 
