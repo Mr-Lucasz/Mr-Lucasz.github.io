@@ -29,7 +29,8 @@ jobs:
 
       - run: yarn build
         env:
-          BASE_PATH: /${{ github.event.repository.name }}/
+          # repo <usuário>.github.io é servido na raiz do domínio
+          BASE_PATH: /
           VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
           VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
           VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
