@@ -18,7 +18,10 @@
   "about_role1": "QA Engineer Sênior",
   "about_role2": "QA Automation Engineer",
   "about_role3": "IA & Automação de Testes",
-  "about_description": "QA Sênior na BEES (AB InBev), como consultor da Levva. Missão principal: elevar a qualidade em cada camada do produto. Atuo como AI Champion no ecossistema AB InBev/BEES, construindo PoCs com agentes de IA e MCP, automação com Playwright, Cypress e Appium, e apoiando a expansão da plataforma pra novos mercados — todo bug crítico que aparece em produção é só mais um chefe que eu já derrotei antes.",
+  "about_description": [
+    "QA Sênior na BEES (AB InBev), atuando como consultor pela Levva. Minha missão é elevar a qualidade do produto em todas as camadas, unindo estratégia de testes, automação e inovação. Como AI Champion, desenvolvo PoCs com agentes de IA e MCP, evoluo a automação com Playwright, Cypress e Appium e contribuo para a expansão da plataforma em novos mercados.",
+    "Acredito que qualidade vai além de encontrar bugs: é antecipar riscos, gerar confiança e garantir valor para o negócio. E quando um bug crítico chega à produção, encaro como mais um chefe de fase: investigo a causa raiz e garanto que ele não volte. 🎮"
+  ],
   "about_menu_fight": "LUTAR",
   "about_menu_items": "ITENS",
   "about_menu_status": "STATUS",

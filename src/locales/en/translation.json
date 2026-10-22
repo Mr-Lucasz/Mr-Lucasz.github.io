@@ -18,7 +18,10 @@
   "about_role1": "Senior QA Engineer",
   "about_role2": "QA Automation Engineer",
   "about_role3": "AI & Test Automation",
-  "about_description": "Senior QA at BEES (AB InBev), as a Levva consultant. Main quest: raise quality at every layer of the product. I work as an AI Champion within the AB InBev/BEES ecosystem, building PoCs with AI agents and MCP, automation with Playwright, Cypress and Appium, and supporting the platform's expansion into new markets — every critical bug that shows up in production is just another boss I've already beaten before.",
+  "about_description": [
+    "Senior QA at BEES (AB InBev), working as a Levva consultant. My mission is to raise product quality at every layer, combining test strategy, automation and innovation. As an AI Champion, I build PoCs with AI agents and MCP, evolve automation with Playwright, Cypress and Appium, and help expand the platform into new markets.",
+    "I believe quality goes beyond finding bugs: it's about anticipating risks, building trust and delivering business value. And when a critical bug reaches production, I treat it as another boss fight: I track down the root cause and make sure it never respawns. 🎮"
+  ],
   "about_menu_fight": "FIGHT",
   "about_menu_items": "ITEMS",
   "about_menu_status": "STATUS",

@@ -163,6 +163,10 @@
   color: var(--pixel-ink);
 }
 
+.dialogueText + .dialogueText {
+  margin-top: 0.8rem;
+}
+
 .battleMenu {
   width: 100%;
   display: grid;

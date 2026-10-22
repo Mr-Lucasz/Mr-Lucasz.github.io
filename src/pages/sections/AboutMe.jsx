@@ -102,7 +102,9 @@ export function AboutMe() {
           speed={50}
           repeat={Infinity}
         />
-        <p className={styles.dialogueText}>{t("about_description")}</p>
+        {t("about_description", { returnObjects: true }).map((paragraph) => (
+          <p className={styles.dialogueText} key={paragraph}>{paragraph}</p>
+        ))}
       </div>
 
       <nav className={styles.battleMenu} aria-label={t("about_menu_aria")}>
