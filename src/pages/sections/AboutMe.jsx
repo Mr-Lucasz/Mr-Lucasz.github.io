@@ -87,7 +87,7 @@ export function AboutMe() {
       </div>
 
       <div className={`${styles.dialogue} pixel-panel`}>
-        <p className={styles.dialogueName}>LUCAS RODRIGUES</p>
+        <h1 className={styles.dialogueName}>LUCAS RODRIGUES</h1>
         <TypeAnimation
           className={styles.dialogueRole}
           sequence={[
@@ -96,8 +96,6 @@ export function AboutMe() {
             t("about_role2"),
             1500,
             t("about_role3"),
-            1500,
-            t("about_role4"),
             1500,
           ]}
           wrapper="p"

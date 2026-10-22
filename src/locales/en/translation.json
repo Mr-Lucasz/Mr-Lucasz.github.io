@@ -10,14 +10,14 @@
   "play_button": "START",
   "play_subtitle": "Character Sheet",
   "play_hint": "Press START to load the save file",
+  "intro_skip": "Skip ▶",
   "about_banner": "A CRITICAL PRODUCTION BUG APPEARED!",
   "about_stat_automation": "AUTOMATION",
   "about_stat_rootcause": "ROOT CAUSE",
   "about_stat_leadership": "LEADERSHIP",
-  "about_role1": "Software Engineer",
-  "about_role2": "Senior QA Engineer",
-  "about_role3": "QA Automation Engineer",
-  "about_role4": "AI & Test Automation",
+  "about_role1": "Senior QA Engineer",
+  "about_role2": "QA Automation Engineer",
+  "about_role3": "AI & Test Automation",
   "about_description": "Main quest: raise quality at every layer of the product. I work as an AI Champion within the AB InBev/BEES ecosystem, building PoCs with AI agents and MCP, automation with Playwright, Cypress and Appium, and supporting the platform's expansion into new markets — every critical bug that shows up in production is just another boss I've already beaten before.",
   "about_menu_fight": "FIGHT",
   "about_menu_items": "ITEMS",
@@ -73,7 +73,7 @@
     }
   ],
   "skills_title": "Skill Inventory",
-  "skills_subtitle": "Items equipped after 8+ years of grinding in production — hover to check each one's level.",
+  "skills_subtitle": "Items equipped after 5+ years of grinding in production — hover to check each one's level.",
   "skills_test_automation": "Test Automation",
   "skills_technical_stack": "Technical Stack",
   "skills_qa_methodology": "QA Methodology",
@@ -130,10 +130,10 @@
   "contact_info_title": "Summoning Channels",
   "contact_info_subtitle": "Pick a channel and send the signal:",
   "contact_email": "Email",
-  "contact_form_name": "Hero Name",
-  "contact_form_email": "Return Scroll (email)",
-  "contact_form_subject": "Quest Title",
-  "contact_form_message": "Message to the NPC",
+  "contact_form_name": "Your name",
+  "contact_form_email": "Your email",
+  "contact_form_subject": "Subject",
+  "contact_form_message": "Message",
   "contact_form_send": "Send Signal",
   "contact_form_success": "Item acquired: message sent! The character will respond soon.",
   "contact_form_error": "The attack missed. Try again or reach out by email directly.",
@@ -190,6 +190,19 @@
       "skills": ["Cypress", "Cucumber", "Postman", "Azure DevOps", "K6", "Jira", "Mobile Testing"]
     },
     {
+      "company": "YOUDevelop",
+      "role": "Product Owner",
+      "period": "Jan 2022 - Nov 2022",
+      "location": "São Paulo, SP",
+      "description": [
+        "Product vision definition and backlog management.",
+        "Stakeholder engagement and delivery planning.",
+        "Monitoring development and product launches.",
+        "Ensuring continuous value delivery and alignment with organizational goals."
+      ],
+      "skills": ["Kanban", "Planning", "Backlog Management", "Stakeholder Engagement", "Quality", "Testing"]
+    },
+    {
       "company": "Cognyte",
       "role": "Junior QA Analyst",
       "period": "Oct 2021 - Dec 2022",
@@ -216,19 +229,6 @@
         "Automation of test scenarios."
       ],
       "skills": ["Functional Testing", "Defect Documentation", "QA"]
-    },
-    {
-      "company": "YOUDevelop",
-      "role": "Product Owner",
-      "period": "Jan 2022 - Nov 2022",
-      "location": "São Paulo, SP",
-      "description": [
-        "Product vision definition and backlog management.",
-        "Stakeholder engagement and delivery planning.",
-        "Monitoring development and product launches.",
-        "Ensuring continuous value delivery and alignment with organizational goals."
-      ],
-      "skills": ["Kanban", "Planning", "Backlog Management", "Stakeholder Engagement", "Quality", "Testing"]
     }
   ]
 }

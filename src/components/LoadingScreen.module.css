@@ -6,10 +6,30 @@
   height: 100vh; /* Garante que o contêiner ocupe toda a altura da janela */
   background-color: black; /* Fundo preto para o vídeo */
   overflow: hidden; /* Evita que o vídeo ultrapasse os limites */
+  position: relative;
+  cursor: pointer;
 }
 
 .video {
   width: 100vw; /* Faz o vídeo ocupar toda a largura */
   height: 100vh; /* Faz o vídeo ocupar toda a altura */
   object-fit: cover; /* Ajusta o vídeo para cobrir a tela sem distorção */
+}
+
+.skipButton {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.skipButton:hover,
+.skipButton:focus-visible {
+  background: rgba(255, 255, 255, 0.15);
 }

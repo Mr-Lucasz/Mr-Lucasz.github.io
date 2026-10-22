@@ -10,14 +10,14 @@
   "play_button": "INICIAR",
   "play_subtitle": "Ficha de Personagem",
   "play_hint": "Pressione INICIAR para carregar o save",
+  "intro_skip": "Pular ▶",
   "about_banner": "UM BUG CRÍTICO EM PRODUÇÃO APARECEU!",
   "about_stat_automation": "AUTOMAÇÃO",
   "about_stat_rootcause": "CAUSA RAIZ",
   "about_stat_leadership": "LIDERANÇA",
-  "about_role1": "Engenheiro de Software",
-  "about_role2": "QA Engineer Sênior",
-  "about_role3": "QA Automation Engineer",
-  "about_role4": "IA & Automação de Testes",
+  "about_role1": "QA Engineer Sênior",
+  "about_role2": "QA Automation Engineer",
+  "about_role3": "IA & Automação de Testes",
   "about_description": "Missão principal: elevar a qualidade em cada camada do produto. Atuo como AI Champion no ecossistema AB InBev/BEES, construindo PoCs com agentes de IA e MCP, automação com Playwright, Cypress e Appium, e apoiando a expansão da plataforma pra novos mercados — todo bug crítico que aparece em produção é só mais um chefe que eu já derrotei antes.",
   "about_menu_fight": "LUTAR",
   "about_menu_items": "ITENS",
@@ -73,7 +73,7 @@
     }
   ],
   "skills_title": "Inventário de Habilidades",
-  "skills_subtitle": "Itens equipados depois de 8+ anos de grind em produção — passe o cursor pra ver o nível de cada um.",
+  "skills_subtitle": "Itens equipados depois de 5+ anos de grind em produção — passe o cursor pra ver o nível de cada um.",
   "skills_test_automation": "Automação de Testes",
   "skills_technical_stack": "Stack Técnico",
   "skills_qa_methodology": "Metodologia de QA",
@@ -130,10 +130,10 @@
   "contact_info_title": "Canais de Invocação",
   "contact_info_subtitle": "Escolhe o canal e manda o sinal:",
   "contact_email": "E-mail",
-  "contact_form_name": "Nome do Herói",
-  "contact_form_email": "Pergaminho de Retorno (e-mail)",
-  "contact_form_subject": "Título da Quest",
-  "contact_form_message": "Mensagem para o NPC",
+  "contact_form_name": "Seu nome",
+  "contact_form_email": "Seu e-mail",
+  "contact_form_subject": "Assunto",
+  "contact_form_message": "Mensagem",
   "contact_form_send": "Enviar Sinal",
   "contact_form_success": "Item adquirido: mensagem enviada! Em breve o personagem responde.",
   "contact_form_error": "A investida falhou. Tenta de novo ou chama direto por e-mail.",
@@ -190,6 +190,19 @@
       "skills": ["Cypress", "Cucumber", "Postman", "Azure DevOps", "K6", "Jira", "Mobile Testing"]
     },
     {
+      "company": "YOUDevelop",
+      "role": "Product Owner",
+      "period": "jan 2022 - nov 2022",
+      "location": "São Paulo, SP",
+      "description": [
+        "Definição da visão do produto e gestão do backlog.",
+        "Engajamento com stakeholders e planejamento de entregas.",
+        "Acompanhamento do desenvolvimento e lançamento de produtos.",
+        "Garantia de entregas contínuas de valor e alinhamento com objetivos organizacionais."
+      ],
+      "skills": ["Kanban", "Planejamento", "Gestão de Backlog", "Stakeholder Engagement", "Qualidade", "Testes"]
+    },
+    {
       "company": "Cognyte",
       "role": "Junior QA Analyst",
       "period": "out 2021 - dez 2022",
@@ -216,19 +229,6 @@
         "Automação de cenários de teste."
       ],
       "skills": ["Testes Funcionais", "Documentação de Defeitos", "QA"]
-    },
-    {
-      "company": "YOUDevelop",
-      "role": "Product Owner",
-      "period": "jan 2022 - nov 2022",
-      "location": "São Paulo, SP",
-      "description": [
-        "Definição da visão do produto e gestão do backlog.",
-        "Engajamento com stakeholders e planejamento de entregas.",
-        "Acompanhamento do desenvolvimento e lançamento de produtos.",
-        "Garantia de entregas contínuas de valor e alinhamento com objetivos organizacionais."
-      ],
-      "skills": ["Kanban", "Planejamento", "Gestão de Backlog", "Stakeholder Engagement", "Qualidade", "Testes"]
     }
   ]
 }
